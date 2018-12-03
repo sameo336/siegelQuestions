@@ -77,6 +77,7 @@ public class GCS_with_proper_decisionTree {
 		GCS_with_proper_decisionTree gcl = new GCS_with_proper_decisionTree();
 		ArrayList <String> A= new ArrayList <String> ();
 		ArrayList <String> B= new ArrayList <String> ();
+		ArrayList <String> B1= new ArrayList <String> ();
 		ArrayList <String> A1= new ArrayList <String> ();
 		ArrayList <String> C1= new ArrayList <String> ();
 		ArrayList <String> D1= new ArrayList <String> ();
@@ -120,6 +121,28 @@ public class GCS_with_proper_decisionTree {
 		B.add("a");
 		B.add("a");
 		
+		B1.add("A");
+		B1.add("A");
+		B1.add("d");
+		B1.add("f");
+		B1.add("d");
+		B1.add("A");
+		B1.add("A");
+		B1.add("A");
+		B1.add("A");
+		B1.add("d");
+		B1.add("e");
+		B1.add("e");
+		B1.add("e");
+		B1.add("e");
+		B1.add("e");
+		B1.add("e");
+		B1.add("e");
+		B1.add("a");
+		B1.add("a");
+		B1.add("a");
+		B1.add("a");
+		
 
 		A1.add("A");
 		A1.add("A");
@@ -158,12 +181,13 @@ public class GCS_with_proper_decisionTree {
 		D2.add("b");
 		
 		
-		gcl.lookUp = new Integer[C1.size()][D1.size()];
-		gcl.decisionTree = new IntPair[C1.size()][D1.size()];
+		gcl.lookUp = new Integer[A.size()][B.size()];
+		gcl.decisionTree = new IntPair[A.size()][B.size()];
 		gcl.sequence = new ArrayList<String> ();
-		System.out.println(gcl.gcl(C1,D1,0));
+		System.out.println(gcl.gcl(A,B,0));
 		System.out.println("No of time GCl has been called: "+ gcl.count);
  
+		System.out.println("Decisions Table");
 		for (int i=0; i< gcl.decisionTree.length;i++) 
 		{
 			for (int j=0; j <gcl.decisionTree[i].length;j++) 
@@ -173,13 +197,23 @@ public class GCS_with_proper_decisionTree {
 			System.out.println();
 		}
 		
-		for (int i=0; i< D1.size();i++) 
+		System.out.println("Lookup Table");
+		for (int row = 0;row< gcl.lookUp.length ;row++) {
+			for(int col =0; col<gcl.lookUp[0].length; col++) {
+				System.out.printf(" ("+row+","+col+"):" + gcl.lookUp[row][col]);
+			}
+			System.out.println();
+		}
+		
+		for (int i=0; i< A1.size();i++) 
 		{
 			
-			System.out.println(D1.get(i));
+			System.out.println(A1.get(i));
 		}
 				
-		gcl.printSequence(1,6, D2);
+		gcl.printSequence(14,19, B1);
+		
+		System.out.println("EXIT!");
 	}
 	 
 }
