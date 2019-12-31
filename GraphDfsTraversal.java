@@ -55,11 +55,13 @@ public class GraphDfsTraversal
 		System.out.println(v.vertexName + " pre:" + v.pre);
 
 		
-		ArrayList <Vertex> adjList = this.adjacency_list.get(v);
+		ArrayList <Vertex> adjList = adjacency_list.get(v);
 		for (Vertex w : adjList)
 		{
 			if (w.pre ==-1)
 			{
+				System.out.println("Traversing from: " 
+			+ v.vertexName + "  to "+ w.vertexName);
 				dfs_graph(w);
 			}
 		}
