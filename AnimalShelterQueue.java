@@ -73,12 +73,13 @@ public class AnimalShelterQueue {
 		shelter.add(1);
 		shelter.add(0);
 		shelter.add(1);
-		shelter.add(1);
+		shelter.add(1); 
 		shelter.add(0);
 		test.printShelter();
 		test.dequeueAny();
 		test.dequeueDog();
 		test.printShelter();
+
 		
 	}
 }

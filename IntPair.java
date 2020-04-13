@@ -22,7 +22,7 @@ class IntPair {
 		  IntPair a =decisionTree[9][9];
 		  System.out.println(a.x);
 		  
-		  ArrayList <String> B = new ArrayList ();
+		  ArrayList <String> B = new ArrayList<String> ();
 		  B.add("A");
 		  System.out.println(B.get(0));
 		  
